@@ -1,0 +1,12 @@
+sudo: required
+services:
+  - docker
+
+before_script:
+  - docker login -u "${DOCKER_USERNAME}" -p "${DOCKER_PASSWORD}
+
+script:
+  - docker build -t whereismytaco/ansible:2.3 --no-cache --pull .
+    docker push whereismytaco/ansible:2.3
+    docker tag whereismytaco/ansible:2.3 whereismytaco/ansible:latest
+    docker push whereismytaco/ansible:latest
