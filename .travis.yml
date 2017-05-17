@@ -3,7 +3,7 @@ services:
   - docker
 
 before_script:
-  - docker login -u "${DOCKER_USERNAME}" -p "${DOCKER_PASSWORD}
+  - docker login -u "${DOCKER_USERNAME}" -p "${DOCKER_PASSWORD}"
 
 script:
   - docker build -t whereismytaco/ansible:2.3 --no-cache --pull .
