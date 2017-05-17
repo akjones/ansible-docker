@@ -1,7 +1,7 @@
 from alpine:3.5
 
 run apk update && \
-    apk add ansible
+    apk add ansible su-exec
 
 run mkdir /.vault
 
