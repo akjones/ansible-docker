@@ -1,10 +1,7 @@
-from ubuntu:xenial
+from alpine:3.5
 
-run apt-get update && \
-    apt-get install -y software-properties-common && \
-    add-apt-repository ppa:ansible/ansible -y && \
-    apt-get update && \
-    apt-get install -y ansible gosu
+run apk update && \
+    apk add ansible
 
 run mkdir /.vault
 
