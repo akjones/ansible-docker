@@ -4,7 +4,7 @@ run apt-get update && \
     apt-get install -y software-properties-common && \
     add-apt-repository ppa:ansible/ansible -y && \
     apt-get update && \
-    apt-get install -y ansible
+    apt-get install -y ansible gosu
 
 run mkdir /.vault
 run adduser ansible --disabled-password
