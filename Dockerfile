@@ -2,8 +2,7 @@ from alpine:3.5
 
 run apk update && apk add su-exec && \
     apk add linux-headers musl-dev python-dev gcc py-pip libffi-dev openssl-dev && \
-    pip install ansible --upgrade && \
-    apk del linux-headers musl-dev python-dev gcc py-pip libffi-dev openssl-dev
+    pip install ansible --upgrade
 
 run mkdir /.vault
 
